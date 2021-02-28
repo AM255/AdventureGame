@@ -2,21 +2,21 @@
 name = input ('Welcome to a game created by Alexandre Magnan. What is your name? : ')
               
 print ('You have been kidnapped and thrown in a dark room. Your goal is to escape the building you have been sequestered in.')
-l1door1 = input ('You have two choices to get out of the room. A red door and a yellow door. Which one do you choose? : ').lower()
-if (l1door1 == 'yellow'):
-    print ('You are greeted by two gards with guns who immediately shoot at you.')
+l1door1 = input ('You have two choices to get out of the room. A red door and a yellow door. Which one do you choose? (r/y) : ').lower()
+if (l1door1 == 'y'):
+    print ('You are greeted by two gards with guns who immediately shoot you.')
     print ('You lost')
-elif (l1door1 == 'red'):
-    l1corridor1 = input ('You arrive in a long dark corridor. At the far end, you see light. On your left, you see a door. (door/corridor) : ').lower()
-    if (l1corridor1 == 'corridor'):
+elif (l1door1 == 'r'):
+    l1corridor1 = input ('You arrive in a long dark corridor. At the far end, you see light. On your left, you see a door. (d/c) : ').lower()
+    if (l1corridor1 == 'c'):
         print ('The light you saw was an open door, but when you come out, you notice there are two guards with guns standing by the door who shoot you.')
         print ('You lost')
-    elif (l1corridor1 == 'door'):
+    elif (l1corridor1 == 'd'):
         print ('You arrive in a long corridor with no doors exept at the very end')
-        l1thingyoutook = input ('You find a gun and an ID badge with no photo on it on the floor. Which one do you take? : ').lower()
+        l1thingyoutook = input ('You find a gun and an ID badge with no photo on it on the floor. Which one do you take? (id/gun) : ').lower()
         if (l1thingyoutook == 'gun'):
             print ('You walk to the door you saw, and when you open it, you are at last able to breath fresh air, but guards standing at the door shoot you because you look suspicious with a gun in your hand.')
             print ('You lost')
-        elif (l1thingyoutook == 'id badge'):
+        elif (l1thingyoutook == 'id'):
             print ('You walk to the door you saw, and when you open it, you are at last able to breath fresh air, and when the guards ask you for ID, you show them the ID badge, and they give you the keys for the car parked in front.')
             print ('You win. Congrats', name, '!')
